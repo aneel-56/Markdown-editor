@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="content"></div>
+    <div id="content2">THis is new **text**</div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      document.getElementById("content").innerHTML = marked.parse(
+        "# Marked in the browser\n\nRendered by **marked**."
+      );
+      document.getElementById("content2").innerHTML = "THis is not new **Tex**";
+    </script>
+  </body>
+</html>
